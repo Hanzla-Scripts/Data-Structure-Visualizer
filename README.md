@@ -18,7 +18,6 @@ An interactive web application that visualizes four fundamental data structures 
    - Insert and delete operations
    - Automatic rotations (LL, RR, LR, RL)
    - Balance factor and height visualization
-   - Highlighting of unbalanced nodes
 
 3. **Graph** (Adjacency Matrix)
    - Directed/undirected graphs
@@ -219,5 +218,6 @@ For questions, issues, or suggestions:
 ---
 
 
-Made with ❤️ by [Your Name]
+Made by [Hanzla Khurram]
+
 
