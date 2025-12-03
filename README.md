@@ -2,12 +2,12 @@
 
 An interactive web application that visualizes four fundamental data structures using C++ compiled to WebAssembly. This project demonstrates how to implement efficient data structures in C++ and expose them to JavaScript for real-time visualization.
 
-## 🚀 Live Demo
+## Live Demo
 (https://hanzla-scripts.github.io/Data-Structure-Visualizer/) 
 
-## ✨ Features
+## Features
 
-### 📊 Four Data Structures Implemented
+### Four Data Structures Implemented
 1. **Binary Heap** (Min/Max Heap)
    - Insert and extract operations
    - Visual tree representation
@@ -34,19 +34,19 @@ An interactive web application that visualizes four fundamental data structures 
    - Collision handling via chaining
    - Bucket visualization
 
-### 🎨 Interactive Visualizations
+### Interactive Visualizations
 - Real-time canvas-based rendering
 - Color-coded nodes and edges
 - Algorithm step highlighting
 - Responsive design for all screen sizes
 
-### ⚡ Performance Highlights
+### Performance Highlights
 - Core algorithms implemented in C++ for optimal performance
 - WebAssembly compilation for near-native speed
 - Efficient memory management
 - Clean JavaScript/C++ interface
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend
 - **HTML5 Canvas** for visualizations
@@ -67,7 +67,7 @@ An interactive web application that visualizes four fundamental data structures 
 - Queue & Stack (used in algorithms)
 - Priority Queue (for Dijkstra/Prim)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 data-structure-visualizer/
@@ -80,7 +80,7 @@ data-structure-visualizer/
 └── data_structures.wasm    # Compiled WebAssembly binary
 ```
 
-## 🔧 Setup and Installation
+## Setup and Installation
 
 ### Prerequisites
 - Modern web browser with WebAssembly support
@@ -113,7 +113,7 @@ data-structure-visualizer/
    - Open `index.html` in a web browser
    - Use any local HTTP server (e.g., `python3 -m http.server`)
 
-## 🎯 Usage Guide
+## Usage Guide
 
 ### Binary Heap
 1. Select "Binary Heap" from the navigation bar
@@ -143,7 +143,7 @@ data-structure-visualizer/
 3. Search for keys to see collision handling
 4. Observe the chaining visualization in buckets
 
-## 🏗️ Architecture Details
+## Architecture Details
 
 ### C++ to JavaScript Bridge
 - **Emscripten Bindings**: Type-safe interface between C++ classes and JavaScript
@@ -162,7 +162,7 @@ data-structure-visualizer/
 - **Color Coding**: Visual feedback for different states and algorithms
 - **Algorithm Highlighting**: Path visualization for graph algorithms
 
-## 📚 Learning Objectives
+## Learning Objectives
 
 This project demonstrates:
 1. **WebAssembly Integration**: How to compile C++ for web execution
@@ -171,14 +171,14 @@ This project demonstrates:
 4. **Cross-language Development**: JavaScript/C++ interoperability
 5. **Algorithm Animation**: Step-by-step visualization of complex algorithms
 
-## 🐛 Known Issues & Limitations
+## Known Issues & Limitations
 
 - Graph visualization limited to 15 nodes for clarity
 - No persistence between page reloads
 - Mobile performance may vary with large graphs
 - Requires modern browser with WebAssembly support
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 Planned features:
 - [ ] Save/Load graph configurations
@@ -189,7 +189,7 @@ Planned features:
 - [ ] Multi-language support
 - [ ] Dark/light theme toggle
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -199,17 +199,17 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Emscripten](https://emscripten.org/) for the C++ to WebAssembly compiler
 - WebAssembly community for excellent documentation
 - All contributors and testers
 
-## 📞 Support
+## Support
 
 For questions, issues, or suggestions:
 - Open an issue on GitHub
@@ -218,6 +218,7 @@ For questions, issues, or suggestions:
 ---
 
 
-Made by [Hanzla Khurram]
+Made by Hanzla Khurram
+
 
 
