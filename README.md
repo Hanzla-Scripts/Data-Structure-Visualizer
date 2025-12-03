@@ -3,7 +3,7 @@
 An interactive web application that visualizes four fundamental data structures using C++ compiled to WebAssembly. This project demonstrates how to implement efficient data structures in C++ and expose them to JavaScript for real-time visualization.
 
 ## 🚀 Live Demo
-[View the application here](#) *(Add your deployment link here)*
+[(https://hanzla-scripts.github.io/Data-Structure-Visualizer/)](#) 
 
 ## ✨ Features
 
@@ -217,5 +217,6 @@ For questions, issues, or suggestions:
 - Check the troubleshooting section in the documentation
 
 ---
+
 
 Made with ❤️ by [Your Name]
