@@ -1,4 +1,4 @@
-# Data Structure Visualizer - WebAssembly Edition
+# Data Structure Visualizer - WebAssembly
 
 An interactive web application that visualizes four fundamental data structures using C++ compiled to WebAssembly. This project demonstrates how to implement efficient data structures in C++ and expose them to JavaScript for real-time visualization.
 
@@ -219,6 +219,7 @@ For questions, issues, or suggestions:
 
 
 Made by Hanzla Khurram
+
 
 
 
