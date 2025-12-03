@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structure Visualizer - WebAssembly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Data Structure Visualizer</h1>
+        <p>Interactive visualization using compiled C++ WebAssembly</p>
+    </header>
+
+    <!-- Data Structure Navigation Bar -->
+    <nav class="ds-navbar">
+        <h3>Select Data Structure</h3>
+        <div class="ds-nav-buttons">
+            <button class="ds-nav-btn active" data-ds="binaryHeap">Binary Heap</button>
+            <button class="ds-nav-btn" data-ds="avlTree">AVL Tree</button>
+            <button class="ds-nav-btn" data-ds="graph">Graph</button>
+            <button class="ds-nav-btn" data-ds="hashTable">Hash Table</button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <!-- Binary Heap Controls -->
+                <div class="ds-controls active" id="binaryHeap-controls">
+                    <h4>Binary Heap Operations</h4>
+                    <div class="input-group">
+                        <input type="number" id="heap-value" placeholder="Enter value">
+                        <button id="insert-heap">Insert</button>
+                        <button id="extract-heap">Extract Top</button>
+                        <button id="clear-heap">Clear</button>
+                    </div>
+                    <div class="heap-type">
+                        <label><input type="radio" name="heap-type" value="min" checked> Min Heap</label>
+                        <label><input type="radio" name="heap-type" value="max"> Max Heap</label>
+                    </div>
+                    <div class="heap-state">
+                        <strong>Heap Array:</strong> <span id="heap-array">[]</span>
+                    </div>
+                    <div class="heap-type-status">
+                        <strong>Current Type:</strong> <span id="heap-current-type">Min Heap</span>
+                    </div>
+                </div>
+
+                <!-- AVL Tree Controls -->
+                <div class="ds-controls" id="avlTree-controls">
+                    <h4>AVL Tree Operations</h4>
+                    <div class="input-group">
+                        <input type="number" id="avl-value" placeholder="Enter value">
+                        <button id="insert-avl">Insert</button>
+                        <button id="remove-avl">Delete</button>
+                        <button id="clear-avl">Clear</button>
+                    </div>
+                    <div class="tree-state">
+                        <strong>Tree Structure:</strong> <span id="tree-display">[]</span>
+                    </div>
+                </div>
+
+                <!-- Graph Controls -->
+                <div class="ds-controls" id="graph-controls">
+                    <h4>Graph Operations</h4>
+                    <div class="input-group">
+                        <input type="number" id="graph-nodes" placeholder="Number of nodes" value="6" min="1" max="15">
+                        <button id="init-graph">Initialize Graph</button>
+                        <button id="clear-graph">Clear Graph</button>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="graph-directed">
+                            Directed Graph
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="from-node" placeholder="From" value="0" min="0">
+                        <input type="number" id="to-node" placeholder="To" value="1" min="0">
+                        <input type="number" id="edge-weight" placeholder="Weight" value="1" min="1">
+                        <button id="add-edge">Add Edge</button>
+                        <button id="remove-edge">Remove Edge</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="vertex-to-remove" placeholder="Vertex to remove" min="0">
+                        <button id="remove-vertex">Remove Vertex</button>
+                        <button id="add-vertex">Add Vertex</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="start-node" placeholder="Start node" value="0" min="0">
+                        <button id="run-bfs">BFS</button>
+                        <button id="run-dfs">DFS</button>
+                        <button id="run-dijkstra">Dijkstra</button>
+                        <button id="run-prim">Prim's MST</button>
+                    </div>
+                    <div class="graph-state">
+                        <strong>Last Result:</strong> <span id="graph-result">-</span>
+                    </div>
+                </div>
+
+                <!-- Hash Table Controls -->
+                <div class="ds-controls" id="hashTable-controls">
+                    <h4>Hash Table Operations</h4>
+                    <div class="input-group">
+                        <input type="number" id="hash-key" placeholder="Key">
+                        <input type="number" id="hash-value" placeholder="Value">
+                        <button id="insert-hash">Insert</button>
+                        <button id="search-hash">Search</button>
+                        <button id="clear-hash">Clear</button>
+                    </div>
+                    <div class="hash-state">
+                        <strong>Search Result:</strong> <span id="search-result">-</span>
+                        <strong>Table State:</strong> <span id="hash-table-state">[]</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visualization Area -->
+            <div class="visualization-area">
+                <div class="canvas-container">
+                    <canvas id="mainCanvas" width="800" height="500"></canvas>
+                </div>
+                
+                <!-- Log Panel -->
+                <div class="log-panel">
+                    <h4>Operation Log</h4>
+                    <div id="log-content" class="log-content">
+                        <div class="log-entry">Initializing application...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Load Emscripten generated JS -->
+    <script src="data_structures.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

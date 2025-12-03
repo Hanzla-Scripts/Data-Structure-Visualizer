@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Data Structure Navigation Bar */
+.ds-navbar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ds-navbar h3 {
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ds-nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.ds-nav-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ds-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ds-nav-btn.active {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2e8b57;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.control-panel {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Remove the old ds-selector from sidebar since it's moved to navbar */
+.ds-selector {
+    display: none;
+}
+
+.ds-controls {
+    display: none;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.ds-controls.active {
+    display: block;
+}
+
+.ds-controls h4 {
+    margin-bottom: 15px;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2e8b57;
+}
+
+.input-group button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #2e8b57;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.input-group button:hover {
+    background: #3cb371;
+    transform: translateY(-2px);
+}
+
+.heap-type {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.heap-type label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #f7fafc;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.visualization-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.canvas-container {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+#mainCanvas {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.log-panel {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.log-panel h4 {
+    margin-bottom: 15px;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.log-content {
+    height: 150px;
+    overflow-y: auto;
+    background: #1a202c;
+    color: #cbd5e0;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.log-entry {
+    margin-bottom: 8px;
+    padding: 5px;
+    border-left: 3px solid #2e8b57;
+    padding-left: 10px;
+}
+
+.log-entry.success {
+    border-left-color: #48bb78;
+    color: #48bb78;
+}
+
+.log-entry.error {
+    border-left-color: #f56565;
+    color: #f56565;
+}
+
+.log-entry.info {
+    border-left-color: #4299e1;
+    color: #4299e1;
+}
+
+.data-display {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.data-display h4 {
+    margin-bottom: 15px;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+#state-display {
+    background: #1a202c;
+    color: #cbd5e0;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+/* Scrollbar styling */
+.log-content::-webkit-scrollbar,
+#state-display::-webkit-scrollbar,
+.canvas-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.log-content::-webkit-scrollbar-track,
+#state-display::-webkit-scrollbar-track,
+.canvas-container::-webkit-scrollbar-track {
+    background: #2d3748;
+    border-radius: 3px;
+}
+
+.log-content::-webkit-scrollbar-thumb,
+#state-display::-webkit-scrollbar-thumb,
+.canvas-container::-webkit-scrollbar-thumb {
+    background: #2e8b57;
+    border-radius: 3px;
+}
+
+.log-content::-webkit-scrollbar-thumb:hover,
+#state-display::-webkit-scrollbar-thumb:hover,
+.canvas-container::-webkit-scrollbar-thumb:hover {
+    background: #3cb371;
+}
+
+.heap-state, .tree-state, .graph-state, .hash-state {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f7fafc;
+    border-radius: 6px;
+    border-left: 4px solid #2e8b57;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+#heap-array, #tree-display, #graph-result, #search-result, #hash-table-state {
+    background: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.heap-type-status {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #f7fafc;
+    border-radius: 4px;
+    border-left: 4px solid #4299e1;
+}
+
+.heap-type-status strong {
+    color: #2d3748;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .control-panel {
+        order: 2;
+    }
+    
+    .visualization-area {
+        order: 1;
+    }
+    
+    .ds-nav-buttons {
+        gap: 0.5rem;
+    }
+    
+    .ds-nav-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .canvas-container {
+        padding: 10px;
+    }
+    
+    #mainCanvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    .container {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .ds-navbar {
+        padding: 0.8rem 1rem;
+    }
+    
+    .ds-nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ds-nav-btn {
+        width: 200px;
+        text-align: center;
+    }
+}
